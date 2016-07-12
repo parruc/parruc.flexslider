@@ -1,0 +1,5 @@
+====================
+parruc.flexslider
+====================
+
+User documentation

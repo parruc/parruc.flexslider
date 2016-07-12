@@ -1,0 +1,18 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="parruc.flexslider">
+
+  <i18n:registerTranslations directory="locales" />
+
+  <includeDependencies package="." />
+  <include package=".behaviors" />
+  
+
+  <permission
+      id="parruc.flexslider.AddSlide"
+      title="parruc.flexslider: Add Slide"
+      />
+
+</configure>

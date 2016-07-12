@@ -1,0 +1,29 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="unibo.magazine">
+
+  <include package=".browser" />
+
+    <!-- Behaviors -->
+    <plone:behavior
+      title="Featured"
+      description="This behavior adds a 'featured' checkbox"
+      provides=".featured.IFeatured"
+      marker=".featured.IFeatured"
+      for="plone.dexterity.interfaces.IDexterityContent"
+      factory=".featured.Featured"
+      />
+
+      <plone:behavior
+        title="Slider"
+        description="This behavior adds a slider to a content type"
+        provides=".slider.ISlider"
+        marker=".slider.ISlider"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        factory=".slider.Slider"
+        />
+
+</configure>
