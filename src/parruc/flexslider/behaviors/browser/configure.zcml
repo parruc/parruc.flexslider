@@ -13,7 +13,9 @@
         class=".slider.SliderViewlet"
         template="./templates/slider.pt"
         permission="zope2.View"
-        layer="...interfaces.IParrucViolareggiocalabriaLayer"
+        layer="...interfaces.IParrucFlexsliderLayer"
     />
+
+
 
 </configure>

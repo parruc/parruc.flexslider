@@ -8,7 +8,30 @@
 
   <includeDependencies package="." />
   <include package=".behaviors" />
-  
+
+  <genericsetup:registerProfile
+      name="default"
+      title="parruc.flexslider"
+      directory="profiles/default"
+      description="Installs the parruc.flexslider add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="parruc.flexslider (uninstall)"
+      directory="profiles/uninstall"
+      description="Uninstalls the parruc.flexslider add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.uninstall"
+      />
+
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="parruc.flexslider-hiddenprofiles"
+      />
+
 
   <permission
       id="parruc.flexslider.AddSlide"
