@@ -9,7 +9,7 @@ from plone.dexterity.interfaces import IDexterityContent
 from plone.supermodel import model
 from z3c.relationfield.schema import RelationChoice, RelationList
 
-slides_src = CatalogSource(portal_type=("Slide", ), )
+slides_src = CatalogSource(portal_type="Slide")
 
 
 @provider(IFormFieldProvider)
