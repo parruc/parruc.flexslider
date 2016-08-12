@@ -3,16 +3,21 @@
   <div id="full-width-slides" tal:define="slides view/slides" tal:condition="slides" class="slider">
     <div class="flexslider">
       <ul class="slides">
-        <li tal:repeat="slide_ref slides">
+          <li tal:repeat="slide_ref slides" class="img-dark">
           <tal:block tal:define="slide nocall:slide_ref/to_object">
-            <img tal:define="scales slide/@@bwimages" tal:replace="structure python:scales.tag('image', width=1200, height=500, direction='down', css_class='img-dark img-responsive')"/>
+            <img tal:define="scales slide/@@bwimages" tal:replace="structure python:scales.tag('image', width=1200, height=300, direction='down', css_class='img-responsive')"/>
             <div class="caption">
               <div class="container">
                 <h1 tal:content="slide/title">Titolo</h1>
                 <tal:block tal:define="link nocall:slide/link/to_object|nothing" tal:condition="link">
                     <a tal:attributes="href link/absolute_url" i18n:translate="" class="btn btn-bordered read-more">Leggi</a>
                 </tal:block>
+                <div class="flex-custom-pager"></div>
               </div>
+            </div>
+            <div class="flex-direction-nav">
+                <a href="#" class="flex-prev">Precedente</a>
+                <a href="#" class="flex-next">Successiva</a>
             </div>
           </tal:block>
         </li>
