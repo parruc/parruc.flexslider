@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:metal="http://xml.zope.org/namespaces/metal" xmlns:tal="http://xml.zope.org/namespaces/tal" xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="parruc.violareggiocalabria">
   <div id="full-width-slides" tal:define="slides view/slides" tal:condition="slides" class="slider">
     <div class="flexslider">
+    <div class="flex-custom-pager"></div>
       <ul class="slides">
           <li tal:repeat="slide_ref slides" class="img-dark">
           <tal:block tal:define="slide nocall:slide_ref/to_object">
@@ -12,12 +13,7 @@
                 <tal:block tal:define="link nocall:slide/link/to_object|nothing" tal:condition="link">
                     <a tal:attributes="href link/absolute_url" i18n:translate="" class="btn btn-bordered read-more">Leggi</a>
                 </tal:block>
-                <div class="flex-custom-pager"></div>
               </div>
-            </div>
-            <div class="flex-direction-nav">
-                <a href="#" class="flex-prev">Precedente</a>
-                <a href="#" class="flex-next">Successiva</a>
             </div>
           </tal:block>
         </li>
