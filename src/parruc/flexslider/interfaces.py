@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 """Module where all interfaces, events and exceptions live."""
 
-from zope.publisher.interfaces.browser import IDefaultBrowserLayer
-
+from . import _
 from plone.app.vocabularies.catalog import CatalogSource
 from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
 from z3c.relationfield.schema import RelationChoice
+from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
-from . import _
 
 launches = CatalogSource(portal_type=("Document", "News Item"))
 
@@ -29,3 +28,4 @@ class ISlide(model.Schema):
         source=launches,
         required=False,
     )
+    model.primary('image')
