@@ -17,5 +17,15 @@
     />
 
 
+    <browser:viewlet
+        name="parruc.parentslider"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+        for="..slider.IParentSlider"
+        class=".slider.ParentSliderViewlet"
+        template="./templates/slider.pt"
+        permission="zope2.View"
+        layer="...interfaces.IParrucFlexsliderLayer"
+    />
+
 
 </configure>

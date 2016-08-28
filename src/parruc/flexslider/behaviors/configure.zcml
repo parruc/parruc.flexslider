@@ -18,4 +18,13 @@
       factory=".slider.Slider"
       />
 
+      <plone:behavior
+        title="ParentSlider"
+        description="This behavior shows nearest parent slider if any"
+        provides=".slider.IParentSlider"
+        marker=".slider.IParentSlider"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        factory=".slider.Slider"
+        />
+
 </configure>

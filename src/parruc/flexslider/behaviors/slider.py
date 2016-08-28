@@ -8,11 +8,16 @@ from z3c.relationfield.schema import RelationChoice
 from z3c.relationfield.schema import RelationList
 from zope.component import adapter
 from zope.interface import implementer
+from zope.interface import Interface
 from zope.interface import provider
 
 
 slides_src = CatalogSource(path={'query': "/", 'depth': -1},
                            portal_type="Slide")
+
+
+class IParentSlider(Interface):
+    pass
 
 
 @provider(IFormFieldProvider)

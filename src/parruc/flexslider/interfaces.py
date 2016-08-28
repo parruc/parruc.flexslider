@@ -20,6 +20,7 @@ class ISlide(model.Schema):
 
     image = NamedBlobImage(
         title=_("Immagine slide"),
+        description=_(u"Dimensione consigliata 1200x300"),
         required=True,
     )
 
