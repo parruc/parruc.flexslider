@@ -12,7 +12,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='parruc.flexslider',
-    version='1.0.3.dev0',
+    version='1.0.3',
     description="Behavior to activate a flexslider on a content-type",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
