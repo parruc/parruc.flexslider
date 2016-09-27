@@ -6,6 +6,7 @@ from plone.app.vocabularies.catalog import CatalogSource
 from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
 from z3c.relationfield.schema import RelationChoice
+from zope import schema
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 
@@ -22,6 +23,11 @@ class ISlide(model.Schema):
         title=_("Immagine slide"),
         description=_(u"Dimensione consigliata 1200x300"),
         required=True,
+    )
+
+    bw = schema.Bool(
+        title=_(u"Convertire in bianco e nero?"),
+        default=True,
     )
 
     link = RelationChoice(
